@@ -1,0 +1,38 @@
+{
+  "name": "stock-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "nodemon server/server.js",
+    "build": "webpack",
+    "dev": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyWongDev/Stock-Tracker.git"
+  },
+  "author": "Andy Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndyWongDev/Stock-Tracker/issues"
+  },
+  "homepage": "https://github.com/AndyWongDev/Stock-Tracker#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "webpack": "^4.39.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^1.18.9",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
