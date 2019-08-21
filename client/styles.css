@@ -1,0 +1,11 @@
+.tradingFloor {
+    display: flex;
+}
+
+.companyCard {
+    display: grid;
+    width: 150px;
+    height: 150px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid black;
+}

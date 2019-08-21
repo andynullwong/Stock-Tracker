@@ -8,10 +8,11 @@ class Company extends Component {
     }
     render() {
         return (
-            <div>
-            <Data body={this.props.ticker} id={`data${this.props.ticker}0`}/>
-            <Data body={this.props.currentPrice} id={`data${this.props.ticker}1`}/>
-            <Data body={this.props.openPrice} id={`data${this.props.ticker}2`}/>
+            <div className='companyCard'>
+            <Data body={`Ticker: ${this.props.ticker}`} id={`data${this.props.ticker}0`}/>
+            <Data body={`Change: ${this.props.delta}%`} id={`data${this.props.ticker}1`}/>
+            <Data body={`Current: $${this.props.currentPrice}`} id={`data${this.props.ticker}2`}/>
+            <Data body={`Open: $${this.props.openPrice}`} id={`data${this.props.ticker}3`}/>
             </div>
         );
     }
