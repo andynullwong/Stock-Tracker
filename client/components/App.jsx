@@ -34,14 +34,25 @@ class App extends Component {
                     time: prevState.time,
                     companies: companiesObj
                 })
-            }
-            );
+            });
         })
         .catch(err => console.error(err));
     }
 
+    componentDidUpdate() {
+        this.interval = setInterval(() => 
+        this.setState( prevState => ({
+            time: ((prevState.time+1)%100),
+            companies: prevState.companies
+        })),10000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
     render() {
-        console.log(Object.keys(this.state.companies).length);
+        // console.log(Object.keys(this.state.companies).length);
         const companyList = [];
         for (let company in this.state.companies) {
             companyList.push(
@@ -53,7 +64,7 @@ class App extends Component {
                 delta = {delta(this.state.companies[company][this.state.time], this.state.companies[company][0])} 
             />)
         }
-        console.log(companyList);
+        // console.log(companyList);
 
         return (
             <div><div>

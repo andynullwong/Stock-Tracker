@@ -1,5 +1,6 @@
 .tradingFloor {
     display: flex;
+    flex-flow: row wrap;
 }
 
 .companyCard {
