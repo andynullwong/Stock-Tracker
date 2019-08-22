@@ -18,6 +18,7 @@ app.get(
   "/api/:ticker",
   companyController.getCompany,
   companyController.addCompany,
+  companyController.getCompany,
   (req, res) => {
     res.send(res.locals.cache);
   }

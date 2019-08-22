@@ -48,6 +48,7 @@ companyController.addCompany = (req, res, next) => {
             if (err) throw err;
             console.log("Adding new data to DB:", company.ticker);
             res.locals.cache = data;
+            next();
           }
         );
       })

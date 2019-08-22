@@ -67,22 +67,21 @@ class App extends Component {
         // console.log(companyList);
 
         return (
-            <div><div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Ticker:&nbsp;
-                        <input type="text" name="tickerBox" />
-                    </label>
-                    &nbsp;<input type="submit" value="Submit" />
-                </form>
+            <div>
+                <div>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Ticker:&nbsp;
+                            <input type="text" name="tickerBox" />
+                        </label>
+                        &nbsp;<input type="submit" value="Submit" />
+                    </form>
+                </div>
+                <br />
+                <div className='tradingFloor'>
+                    {companyList}
+                </div>
             </div>
-            <br />
-            <div className='tradingFloor'>
-            {companyList}
-            {/* <Company ticker='MFST' openPrice={100} currentPrice={110} delta={delta(110, 100)} id={`company${0}`}/>
-            <Company ticker='GOOG' openPrice={200} currentPrice={210} delta={delta(210, 200)} id={`company${1}`}/>
-            <Company ticker='AAPL' openPrice={300} currentPrice={310} delta={delta(310, 300)} id={`company${2}`}/> */}
-            </div></div>
         );
     }
 }
