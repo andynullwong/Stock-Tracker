@@ -13,6 +13,9 @@ mongoose.connect(
 
 const companyController = {};
 companyController.addCompany = (req, res, next) => {
+  if (res.locals.cache) {
+    next();
+  }
   fetch(
     `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${
       req.params.ticker
@@ -33,14 +36,25 @@ companyController.addCompany = (req, res, next) => {
         { ticker: company.ticker },
         company,
         { upsert: true, useFindAndModify: true },
-        (err, res) => {
+        (err, data) => {
           if (err) throw err;
-          console.log("Record Updated:", company.ticker);
+          res.locals.cache = data.toString();
         }
       );
     })
   );
-  next();
+};
+
+companyController.getCompany = (req, res, next) => {
+  Company.findOne({ ticker: req.params.ticker }, (err, data) => {
+    if (err) {
+      res.send(err);
+    }
+    if (data) {
+      res.locals.cache = data.toString();
+      next();
+    }
+  });
 };
 
 module.exports = companyController;

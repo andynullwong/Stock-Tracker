@@ -22,8 +22,8 @@ class App extends Component {
         const userInput = (event.target[0].value);
         const newState = Object.create(this.state);
         newState.companies.push(userInput);
-        console.log('State has changed!', newState);
-        this.setState(newState);
+        fetch(`/api/${userInput}`).then(data => console.log('State has changed!', newState))
+        .then(this.setState(newState));
     }
 
     render() {
