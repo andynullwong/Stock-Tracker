@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -17,12 +19,9 @@ app.get(
   companyController.getCompany,
   companyController.addCompany,
   (req, res) => {
-    console.log("Cache:", res.locals.cache);
     res.send(res.locals.cache);
   }
 );
-
-// app.get("/db/:ticker", companyController.getCompany, (req, res) => {});
 
 app.listen(PORT);
 console.log(`App listening on Port ${PORT}`);

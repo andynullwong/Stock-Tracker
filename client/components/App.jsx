@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Company from "./Company.jsx";
@@ -11,7 +12,7 @@ class App extends Component {
         super(props);
         this.state = {
             time: 0,
-            companies: []
+            companies: [],
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +23,10 @@ class App extends Component {
         const userInput = (event.target[0].value);
         const newState = Object.create(this.state);
         newState.companies.push(userInput);
-        fetch(`/api/${userInput}`).then(data => console.log('State has changed!', newState))
+        fetch(`/api/${userInput}`).then(data => {
+            // console.log(data);
+            console.log('State has changed!', newState);
+    })
         .then(this.setState(newState));
     }
 
