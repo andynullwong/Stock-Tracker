@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     componentDidUpdate() {
-        this.interval = setInterval(() => 
+        this.interval = setInterval(() =>
         this.setState( prevState => ({
             time: ((prevState.time+1)%100),
             companies: prevState.companies
