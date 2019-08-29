@@ -4,8 +4,10 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const companyController = require("./controllers/companyController.js");
+const lightningcomm = require("lightningcomm");
 
 const app = express();
+const lc = lightningcomm(app);
 const PORT = 3000;
 
 app.use("/dist", express.static(path.join(__dirname, "../dist")));

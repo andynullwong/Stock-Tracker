@@ -22,13 +22,15 @@
   "description": "",
   "dependencies": {
     "express": "^4.17.1",
+    "lightningcomm": "^0.1.0",
     "mongodb": "^3.3.0",
     "mongoose": "^5.6.10",
     "node-fetch": "^2.6.0",
     "path": "^0.12.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "webpack": "^4.39.2"
+    "webpack": "^4.39.2",
+    "ws": "^7.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
