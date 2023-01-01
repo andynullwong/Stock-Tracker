@@ -28,18 +28,18 @@
     "path": "^0.12.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "webpack": "^4.39.2"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
+    "css-loader": "^6.7.3",
     "eslint-plugin-react": "^7.14.3",
     "nodemon": "^1.18.9",
     "style-loader": "^1.0.0",
-    "webpack-cli": "^3.3.7",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^3.8.0"
   }
 }
